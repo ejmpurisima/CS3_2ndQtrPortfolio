@@ -1,1 +1,245 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <title> Potassium Friday Schedule </title>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet">
+
+        <link rel="icon" href="/favicon-v3.png">
+
+        <style> 
+
+        .hide {
+            display: none;
+        }
+
+        .myDIV:hover + .hide{
+        display: block;
+        color: #17428d;
+        font-size: 20px;
+        text-align: center;
+        font-family: 'Delius', cursive;
+        }
+
+        .bottom-photo {
+        display: block;
+        width: 40%;      
+        max-width: 800px;
+        height: auto;
+        margin: 30px auto;
+        border-radius: 20px;    
+        box-shadow: 0 0 25px #17428d;
+        transition: transform 0.3s ease;
+        }
+
+        .bottom-photo:hover {
+         transform: scale(1.03);
+        }
+
+        .schedule-card {
+            width: 300px;
+            height: auto;
+            padding: 20px;
+            margin: 40px auto;
+
+            background-color: #edf2fb;
+            border: 3px solid #a3cef1;
+            border-radius: 15px;
+
+            box-shadow: 0 0 25px #17428d;
+        }
+
+        .sched-header {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: left;
+            color: #012a4a;
+            font-family: 'Delius', cursive;
+        }
+
+        .days-list {
+            list-style-type: disc; 
+            padding-left: 30px;
+            margin: 10px 0;
+            text-align: left;
+
+        }
+
+        .days-list a {
+            display: inline;
+            font-size: 20px;
+            font-weight: bold;
+            color: #17428d;
+            text-decoration: underline;
+            transition: color 0.5 s ease-in-out;
+        }
+
+        .days-list a:hover {
+            color: #5fa8d3; /* Darker blue color on hover */
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        
+            body {
+                background-color: lightgoldenrodyellow;
+                font-size: 25px;
+                text-align: center;
+                color: #17428d;
+                font-family: 'Delius', cursive;
+
+                background-image: url('https://i.pinimg.com/1200x/d1/e6/71/d1e67103bab2abb0d75a2d90aa7a7aab.jpg');
+                background-size: cover;
+                background-position: center;
+            }
+
+            .delius-regular {
+            font-family: "Delius", cursive;
+            font-weight: 400;
+            font-style: normal;
+            }
+
+            h1 {
+                text-align: center;
+                color: #012a4a; 
+            }
+
+            table {
+            width: 77%;
+            border-collapse: separate;
+            border-spacing: 1px;
+            border: 2px solid #013a63;
+            border-radius: 10px;
+            overflow: hidden; 
+            margin: 20px auto;
+            background-color: rgb(255, 252, 239);
+            box-shadow: 0 0 20px #01497c;
+        }
+
+        td,th {
+            padding: 13px;
+            border: 2px solid #014f86;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 23px;
+            color: #013a63;
+        }
+
+        th {
+        background-color: #5fa8d3;
+        color: #dcecf7;
+        }
+
+        tr:nth-child(even) td:first-child {
+        background-color: #e4f4fa; 
+        }
+
+        tr:hover {
+        background-color: #bde3f0; 
+        transition: 0.3s;
+        }
+
+        img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        box-shadow: 0 0 20px #01497c;
+        }
+
+        mark {
+        background-color: #edf2fb;
+        color: #012a4a;
+        padding: 7px;
+        }
+        </style>
+        <body>
+
+
+    <h1> Potassium Friday Schedule! *ੈ✩‧₊˚🌊 </h1>
+    <table class = "schedule-table">
+        <tr> 
+            <th> Time ⋆˚࿔ </th>
+            <th> Subject ⋆˚࿔ </th>
+            <th> Remarks and Reminders ⋆˚࿔ </th>
+        </tr>
+        <tr>
+            <td> 7:30 - 8:15 AM </td>
+            <td> Physics 😒🎯 </td>
+            <td> Bring scientific calculator, protractor, and ruler! 📌</td>
+        </tr>
+        <tr>
+            <td> 8:15 - 9:00 AM </td>
+            <td> Study Period #1 📄🩷 </td>
+            <td> Paskorus Practice ⭐🎄</td>
+        </tr>
+        <tr>
+            <td> 9:10 AM - 9:55 AM </td>
+            <td rowspan = "2"> English 💍📜 </td>
+            <td rowspan = "2"> Watching "Pride and Prejudice" 💌 </td>
+        </tr>
+
+        <tr>
+            <td>9:55 AM - 10:40 AM</td>
+        </tr>
+
+        <tr>
+            <td> 10:40 - 11:25 AM </td>
+            <td rowspan = "2"> Social Science 🪶🗺️ </td>
+            <td rowspan = "2"> Finishing up lectures 🖋️📔 </td>
+        </tr>
+
+        <tr>
+            <td> 11:25 AM - 12:20 PM </td>
+        </tr>
+
+        <tr>
+            <td> 12:20 - 1:05 PM </td>
+            <td> Lunch 🍜🧋 </td>
+            <td> Eat well! 🫡</td>
+        </tr>
+        <tr>
+            <td> 1:50 - 2:35 PM </td>
+            <td> Study Period #2 📄🩷 </td>
+            <td> Paskorus Practice 🎶⛄</td>
+        </tr>
+        <tr>
+            <td> 2:45 - 4:15 PM </td>
+            <td> Mathematics 😴📈 </td>
+            <td> Lecture and worksheet 🧮➗</td>
+        </tr>
+    </table>
+
+    <p> <mark> You're finally free and made it to the weekend! WOOOO! </mark> </p>
+    <p> <mark> To enjoy your weekend, here's Haikyuu's OVA 4 & 5 🐈‍⬛🦉🏐 </mark></p>
+
+<iframe width="560" height="315" 
+src="https://www.youtube.com/embed/dbRNg60UGCw?si=XCuETKgX3Tiop6u3" 
+title="YouTube video player" 
+frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+allowfullscreen>
+</iframe>
+
+    <p> <mark> I chose this video because Haikyuu!! is my favorite anime, and OVAs 4 & 5 are my favorites! </mark></p>
+    <p> <mark> I also really love watching anime after school on Friday because I feel so free... ꉂ(˵˃ ᗜ ˂˵) </mark></p>
+
+    <img src = "https://i.pinimg.com/736x/8f/e1/1a/8fe11a71a3f6998a6fc601cae198890e.jpg" alt = "Alice In Borderland S2" class="bottom-photo"
+        width = "600" height = "600" style="display:block; margin:auto;">
+    
+    <div class="myDIV"><br><mark> I chose this photo because AIB is sooo peak.</mark></div>
+    <div class="hide">i love u chishiya shuntaro :3</div>
+
+    <div class="schedule-card">
+        <div class = "sched-header"> 🖇️ Other Schedules ! </div>
+        <ul class = "days-list">
+            <li><a href = "https://1sacodez.github.io/CS3_2ndQtrPortfolio/public/2Q1GPotassiumBuban.html"> Monday Schedule</a></li>
+            <li><a href = "https://b2029artbalingit.github.io/CS3_1stQtrPortfolio/public/2Q1GPotassiumBalingit.html">Tuesday Schedule</a></li>
+            <li><a href = "https://ninatuddao.github.io/CS3_1stQtrPortfolio/public/2Q1GPotassiumTuddao.html"> Thursday Schedule</a></li>
+        </ul>
+    </div>
+
 
