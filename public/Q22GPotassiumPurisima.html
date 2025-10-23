@@ -13,29 +13,56 @@
         <style>
         
         body {
-            background-color: #7BD3EA;
+            background-color: #9feafd;
             font-family: 'Delius', cursive;
             font-size: 25px;
             text-align: center;
             color: #026295;
             font-weight: semi-bold;
         }
-
-        h1 {
-            text-align: center;
-            color: #012a4a; 
-            }
         
         table {
             width: 67%;
-            border-collapse: collapse;
+            border-collapse: separate;
             border-spacing: 1px;
             border: 2px solid #013a63;
             border-radius: 10px;
             overflow: hidden; 
             margin: 20px auto;
-            background-color: rgb(255, 252, 239);
+            background-color: rgb(211, 247, 255);
             box-shadow: 0 0 20px #01497c;
         }
 
+        td,th {
+            padding: 13px;
+            border: 2px solid #014f86;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 23px;
+            color: #003b65;
+        }
+
+        th {
+        background-color: #66a9d0;
+        color: #f1f9ff;
+        }
+
+        tr:nth-child(even) td:first-child {
+        background-color: #e4f4fa; 
+        }
+
+        tr:hover {
+        background-color: #bde3f0; 
+        transition: 0.3s;
+        }
+
         </style>
+        <body>
+        <table class = "pota-sched">
+            <tr>
+                <th> Time </th>
+                <th> Subject/Activity </th>
+                <th> Remarks </th>
+            </tr>
+        </table> 
+        </body>
