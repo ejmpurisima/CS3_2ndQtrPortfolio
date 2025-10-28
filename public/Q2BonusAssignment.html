@@ -1,47 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title> Profile Card . . .</title>
     <style>
+        body {
+            background-image: url('https://i.pinimg.com/1200x/d1/25/53/d125537cdab82e9769b8f030434740fa.jpg');
+            background-size: cover;
+            background-color: #fff0f6;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            min-height: 100vh;
+        }
+
         #intro-card {
-            width: 600px;
+            width: 90%;
+            max-width: 400px;
             height: auto;
-            margin: 40px auto;
+            margin: 100px 100px;
             padding: 30px;
 
-            background-color: #ffc4d4;
-            border: 3px solid #a13c57;
+            background-color: #fff5d6;
+            border: 3px solid #e5d97f;
             border-radius: 15px;
+            box-shadow: 0 0 30px #01657c;
+
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
         }
 
         .intro-header {
-            font-size: 40px;
+            font-size: 27px;
             font-weight: bold;
             text-align: center;
         }
 
         .info {
             font: "Arial", sans-serif;
-            font-size: 30px;
+            font-size: 20px;
             margin-top: 20px;
             color: black;
             text-align: center;
         }
 
-        .intro-card a:hover {
+        .intro-card:hover {
+            background-color: aliceblue;
+            border-color: #74c0fc;
+            color: rgb(211, 255, 254);
             cursor: pointer;
-            color: rgb(232, 145, 177)
         }
+
 
     </style>
 </head>
 
+<body>
  <div id = "intro-card">
          <div class = "intro-header"> ˗ˏˋ Get to know me better! ♡ ˎˊ˗ </div>
          <ul class = "info">
-            <li> Hi! My name's Erin Janina Purisima. My nickname is Erin. </li>
-            <li> I have some hobbies. My favorites are playing volleyball 🏐 and watching anime 📺 !</li>
-            <li> I have no fun fact about me... but fun fact about strawberries! The little specks on strawberries are called achenes. 🍓</li>
-
-
+            <li> Hi! My name is Erin. 𝜗ৎ</li>
+            <li> My favorite hobbies are playing volleyball 🏐 and watching anime 📺 !</li>
+            <li> Fun fact: I hate doing legos because I get annoyed easily ＞﹏＜</li>
+        </ul>
 </div>
+</body>
 </html>
