@@ -24,16 +24,39 @@
             line-height: 1.2;
         }
 
+        select, input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-family: "Open Sans", sans-serif;
+        }
         body {
             font-family: "Open Sans", sans-serif;
             font-size: 20px;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
         }
 
         .buttons {
-            display: grid;
-            place-items: center;
-            height: 200px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+
+        }
+
+        .buttons input[type="submit"], .buttons input[type="reset"] {
+            font-family: "Open Sans", sans-serif;
+            padding: 12px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #008bee;
+            color: white;
         }
     </style>
 
@@ -60,7 +83,7 @@
     <body>
         <form method = "post" action = "submit" onsubmit = "return submit()" onreset="return reset()">
             <fieldset>
-                <legend>Student Information</legend>
+                <legend><b>Student Information</b></legend>
     
                 <label>
                     Student ID:
@@ -84,7 +107,7 @@
              </fieldset>
 
              <fieldset>
-                <legend> Application Details </legend>
+                <legend><b>Application Details</b></legend>
 
                 <label>
                     Mobile Phone Number: 
