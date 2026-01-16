@@ -19,16 +19,27 @@
             margin-bottom: 40px;
         }
 
+        form:hover{
+            background-color: aliceblue;
+            border-color: #74c0fc;
+            cursor: pointer;
+            transition: transform ease-in-out 0.3s;
+            transform: scale(1.05);
+        }
+
         fieldset {
             width: 550px;
             margin: auto;
-            margin-top: 70px;
+            margin-top: 40px;
             line-height: 1.2;
+            padding-top: 10px;
         }
 
         legend {
             font-size: 24px;
             font-weight: bold;
+            line-height: 1.1;
+            margin-bottom: 0;
         }
 
         select, input[type="date"], input[type="text"], input[type="email"] {
@@ -66,14 +77,22 @@
             background-color: #008bee;
             color: white;
         }
+
+        select:focus, input[type="date"]:focus, input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus, textarea:focus {
+            outline: none;                 
+            border-color: #008bee;
+            box-shadow: 0 0 5px #74c0fc;
+            background-color: #ffffff;
+        }
+
     </style>
 
     <script>
-        function submit(){
+        function confSubmit(){
             return confirm("Please check your application. Click Submit if all details are confirmed.");
         }
 
-        function reset(){
+        function confReset(){
             return confirm("Are you sure you want to reset the form?");
         }
 
@@ -90,7 +109,7 @@
 
     <body>
         <main>
-        <form method = "post" action = "submit" onsubmit = "return submit()" onreset="return reset()">
+        <form method = "post" action = "submit" onsubmit = "return confSubmit()" onreset="return confReset()">
             <fieldset>
                 <legend><b>Student Information</b></legend>
     
