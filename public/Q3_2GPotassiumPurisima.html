@@ -15,6 +15,8 @@
             border-radius: 5px;
             background-color: #f2f2f2;
             padding: 20px;
+            margin-top: 40px;
+            margin-bottom: 40px;
         }
 
         fieldset {
@@ -24,17 +26,23 @@
             line-height: 1.2;
         }
 
-        select, input[type="date"] {
-            width: 100%;
+        legend {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        select, input[type="date"], input[type="text"], input[type="email"] {
+            width: 80%;
             padding: 10px;
             border-radius: 5px;
             border: 1px solid #ccc;
             font-family: "Open Sans", sans-serif;
         }
+
         body {
             font-family: "Open Sans", sans-serif;
             font-size: 20px;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             display: flex;
             justify-content: center;
@@ -81,6 +89,7 @@
     </head>
 
     <body>
+        <main>
         <form method = "post" action = "submit" onsubmit = "return submit()" onreset="return reset()">
             <fieldset>
                 <legend><b>Student Information</b></legend>
@@ -160,5 +169,6 @@
             <input type="reset" value="Reset">
          </div>
     </form>
+    </main>
 </body>
 
