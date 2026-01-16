@@ -21,7 +21,7 @@
             width: 550px;
             margin: auto;
             margin-top: 70px;
-            line-height: 2.0;
+            line-height: 1.2;
         }
 
         body {
@@ -31,7 +31,7 @@
         }
 
 
-       buttons{
+       input[type="submit"]{
             width: 500px;
             align-items: center;
             justify-content: center;
@@ -70,17 +70,17 @@
                 <label>
                     Student ID:
                     <input type="number" required>
-                </label>
+                </label><br></br>
     
                 <label>
                     Full Name:
-                    <input type="text" required onblur="checkEmpty(this)">
-                </label>
+                    <input type="text" required onblur="checkEmpty(this)"></label>
+                </label><br></br>
     
                 <label>
                     Birthday:
                     <input type="date" required>
-                </label>
+                </label><br></br>
     
                 <label>
                     Email Address:
@@ -94,7 +94,7 @@
                 <label>
                     Mobile Phone Number: 
                     <input type="text" required onblur="checkEmpty(this)">
-                </label>
+                </label><br></br>
 
                 <label>
                     Grade Level:
@@ -107,13 +107,13 @@
                         <option value="g11">Grade 11</option>
                         <option value="g12">Grade 12</option>
                     </select>
-                </label>
+                </label><br></br>
     
                 <label>
                     Intern / Extern:
                     <input type="radio" name="type" value="intern" required> Intern
                     <input type="radio" name="type" value="extern" required> Extern
-                </label>
+                </label><br></br>
     
                 <label>
                     Choose Club:
@@ -128,12 +128,13 @@
                         <option value="ellipsis">Ellipsis [Literature]</option>
                         <option value="astrosoc">AstroSoc [Astronomy]</option>
                     </select>
-                </label>
+                </label><br></br>
 
              <label>
                 Why do you want to join this club?
-                <textarea required onblur="checkEmpty(this)" rows="5"></textarea>
-            </label>
+                <textarea required onblur="checkEmpty(this)" rows="1"></textarea>
+            </label><br></br>
+
          </fieldset>
 
          <div class="buttons">
