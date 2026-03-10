@@ -58,7 +58,7 @@
         button {
             width: 100%;
             padding: 12px;
-            background-color: #edaecf;
+            background-color: #eb6cb8;
             color: white;
             border: none;
             border-radius: 5px;
@@ -156,9 +156,9 @@
 
         const newMovie = {
             title: title,
-            year: year,
+            year: Number(year),
             genre: genre,
-            rating: currentRating
+            rating: Number(currentRating)
         };
 
         const movies = JSON.parse(localStorage.getItem('movies')) || [];
@@ -166,7 +166,7 @@
         
         localStorage.setItem('movies', JSON.stringify(movies));
         clearForm();
-        displayMovies();
+        displayMov();
     }
 
     function clearForm() {
@@ -176,23 +176,24 @@
         updateStars(0);
     }
 
-    function displayMovies() {
+    function displayMov(){
     const movies = JSON.parse(localStorage.getItem('movies')) || [];
-    const movList = document.getElementById('movlist');
+    const movList = document.getElementById('movieList'); 
     movList.innerHTML = '';
 
     movies.forEach(movie => {
+        const starString = '★'.repeat(movie.rating);
         const movieItem = document.createElement('div');
-        movieItem.classList.add('movie-item');
+        movieItem.className = 'movie-item'; 
         movieItem.innerHTML = `
-            <strong>${movie.title}</strong> (${movie.year}) - ${movie.genre} <br>
-            Rating: <span class="yellow-text">${'★'.repeat(movie.rating)}${'☆'.repeat(5 - movie.rating)}</span>
+            <strong>${movie.title} (${movie.year})</strong> - ${movie.genre}, 
+            Rating: <span class="yellow-text">${starString}</span>
         `;
-        movList.appendChild(movieItem);
+        
+        movList.appendChild(movieItem); 
     });
 }
-
-    displayMovies();
+    displayMov();
 
 </script>
 
