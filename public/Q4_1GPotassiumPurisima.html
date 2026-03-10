@@ -21,27 +21,39 @@
 
     </style>
     <body>
-        <main>
-            <form>
-                <fieldset>
-                    <legend><b> Add a Movie </b></legend>
+    <div class = "form-group">
+        <label> Title: </label>
+        <input type = "text" id = "title" placeholder = "Enter movie title">
+    </div>
 
-                    <label> Title:
-                        <input type="text" name="title" required> </label>
+    <div class = "form-group">
+        <label> Year: </label>
+        <input type = "number" id = "year" placeholder = "2026">
+    </div>
 
-                    <label> Year:
-                        <input type="number" name="year" required> </label>
+    <div class = "form-group">
+        <label> Genre: </label>
+            <select id = "genre">
+            <option value="action">Action</option>
+            <option value="comedy">Comedy</option>
+            <option value="drama">Drama</option>
+            <option value="horror">Horror</option>
+            <option value="romance">Romance</option>
+            <option value="documentary">Documentary</option>
+        </select>
+    </div>
 
-                    <label> Genre:
-                        <select required>
-                            <option value="">Select a genre</option>
-                            <option value="action">Action</option>
-                            <option value="comedy">Comedy</option>
-                            <option value="drama">Drama</option>
-                            <option value="horror">Horror</option>
-                            <option value="sci-fi">Sci-Fi</option>
-                        </select>
-                </fieldset>
+    <label>Rating:</label>
+    <div class="stars" id="starContainer">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+    </div>
+
+    <button onclick="addMovie()">Add Movie</button>
+
             </form>
         </main>
     </body>
