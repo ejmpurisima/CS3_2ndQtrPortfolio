@@ -196,33 +196,32 @@
     const movList = document.getElementById('movieList'); 
     movList.innerHTML = '';
 
-    movies.forEach(movie => {
+    movies.forEach(movie, index => {
 
         if (typeof movie.title !== "string") return;
 
         const rating = Number(movie.rating) || 0;
-        const starString = '★'.repeat(Math.round(movie.rating));
+        const starString = '★'.repeat(rating);
 
         const movieItem = document.createElement('div');
         movieItem.className = 'movie-item'; 
 
         movieItem.innerHTML = `
             <strong>${movie.title} (${movie.year})</strong> - ${movie.genre}, 
-            Rating: <span class="yellow-text">${starString}</span> <button onclick = "deleteMovie(${index})"
+            Rating: <span class="yellow-text">${starString}</span> <button onclick = "deleteMovie(${index})">Delete</button>
         `;
         
         movList.appendChild(movieItem); 
     });
     }
 
-    function deleteMovie(){
+    function deleteMovie(index){
         if (confirm("Are you sure you want to delete this movie?")){
             let currentMovies = JSON.parse(localStorage.getItem('movies')) || []
-            movies.splice(index, 1);
-            localStorage.setItem('movies', JSON.stringify(movies));
+            currentMovies.splice(index, 1);
+            localStorage.setItem('movies', JSON.stringify(currentMovies));
         }
     }
-
 
 
     displayMov();
