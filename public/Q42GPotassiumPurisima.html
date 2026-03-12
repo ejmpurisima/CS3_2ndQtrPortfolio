@@ -167,9 +167,13 @@
         const existingMovie = movies.find(movie => movie.title.toLowerCase() === title.toLowerCase())
         if (existingMovie){
             existingMovie.counter += 1;
-            existingMovie.rating = existingMovie.rating * (existingMovie.counter - 1) + Number(currentRating)
-            existingMovie.rating = Math.ceil()
-
+            let averageRate = (existingMovie.rating * (existingMovie.counter - 1) + Number(currentRating)) / existingMovie.counter;
+            
+            if (averageRate % 1 >= 0.5){ 
+                existingMovie.rating = Math.ceil(averageRate);
+            }
+            else { existingMovie.rating = Math.floor(averageRate) }
+            
         }
         else { movies.push(newMovie); }
 
@@ -197,7 +201,7 @@
         if (typeof movie.title !== "string") return;
 
         const rating = Number(movie.rating) || 0;
-        const starString = '★'.repeat(movie.rating);
+        const starString = '★'.repeat(Math.round(movie.rating));
 
         const movieItem = document.createElement('div');
         movieItem.className = 'movie-item'; 
