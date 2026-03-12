@@ -173,7 +173,7 @@
                 existingMovie.rating = Math.ceil(averageRate);
             }
             else { existingMovie.rating = Math.floor(averageRate) }
-            
+
         }
         else { movies.push(newMovie); }
 
@@ -208,12 +208,24 @@
 
         movieItem.innerHTML = `
             <strong>${movie.title} (${movie.year})</strong> - ${movie.genre}, 
-            Rating: <span class="yellow-text">${starString}</span>
+            Rating: <span class="yellow-text">${starString}</span> <button onclick = "deleteMovie()"
         `;
         
         movList.appendChild(movieItem); 
     });
+
+    function deleteMovie(){
+        if (confirm("Are you sure?")){
+            localStorage.setItem(JSON.stringify(movies));
+            const movie_arr = localStorage.getItem(movies);
+
+
+        }
+    }
+
 }
+
+
 
     displayMov();
 
