@@ -182,9 +182,15 @@
     movList.innerHTML = '';
 
     movies.forEach(movie => {
+
+        if (typeof movie.title !== "string") return;
+        
+        const rating = Number(movie.rating) || 0;
         const starString = '★'.repeat(movie.rating);
+
         const movieItem = document.createElement('div');
         movieItem.className = 'movie-item'; 
+
         movieItem.innerHTML = `
             <strong>${movie.title} (${movie.year})</strong> - ${movie.genre}, 
             Rating: <span class="yellow-text">${starString}</span>
