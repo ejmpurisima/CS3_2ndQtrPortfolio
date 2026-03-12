@@ -162,6 +162,12 @@
         };
 
         const movies = JSON.parse(localStorage.getItem('movies')) || [];
+        
+        const existingMovie = movies.find(movie => movie.title.toLowerCase() === title.toLowerCase())
+        if (existingMovie){
+
+        }
+        
         movies.push(newMovie);
         
         localStorage.setItem('movies', JSON.stringify(movies));
@@ -184,7 +190,7 @@
     movies.forEach(movie => {
 
         if (typeof movie.title !== "string") return;
-        
+
         const rating = Number(movie.rating) || 0;
         const starString = '★'.repeat(movie.rating);
 
