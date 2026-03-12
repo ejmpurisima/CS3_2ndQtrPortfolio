@@ -158,17 +158,22 @@
             title: title,
             year: Number(year),
             genre: genre,
-            rating: Number(currentRating)
+            rating: Number(currentRating),
+            counter: 1,
         };
 
         const movies = JSON.parse(localStorage.getItem('movies')) || [];
         
         const existingMovie = movies.find(movie => movie.title.toLowerCase() === title.toLowerCase())
         if (existingMovie){
+            existingMovie.counter += 1;
+            existingMovie.rating = existingMovie.rating * (existingMovie.counter - 1) + Number(currentRating)
+            existingMovie.rating = Math.ceil()
 
         }
-        
-        movies.push(newMovie);
+        else { movies.push(newMovie); }
+
+
         
         localStorage.setItem('movies', JSON.stringify(movies));
         clearForm();
