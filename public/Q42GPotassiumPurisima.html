@@ -196,7 +196,7 @@
     const movList = document.getElementById('movieList'); 
     movList.innerHTML = '';
 
-    movies.forEach(movie, index => {
+    movies.forEach((movie, index) => {
 
         if (typeof movie.title !== "string") return;
 
@@ -220,6 +220,8 @@
             let currentMovies = JSON.parse(localStorage.getItem('movies')) || []
             currentMovies.splice(index, 1);
             localStorage.setItem('movies', JSON.stringify(currentMovies));
+
+            displayMov();
         }
     }
 
