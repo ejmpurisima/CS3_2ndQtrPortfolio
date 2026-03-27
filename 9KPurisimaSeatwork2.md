@@ -70,7 +70,7 @@
 - Add in css ```position: absolute; top: 66px; left: 200px;``` to .content.
 
 - Guided Question: What is the effect of position: absolute on an element? How is it different from fixed?
-- Answer: 
+- Answer: Absolute is positioned relative to the nearest positioned ancestor. It's not like the fixed that remains in the page all the time.
 
 ### Step 4 : (Absolute)
 
@@ -90,6 +90,7 @@
 - Give .content a z-index: 1.
 
 - Guided Question: Why does the notice appear on top of the content? What happens if you swap the z‑index values?
+- Answer: The notice appears on top of the "main content" because its z-index is higher than content's. If we swap the values, "notice" will be behind the content box.
 
 - Challenge: 
     * What changes that you have to do on the code that will position .notice box on the top right corner of the .content box? Please write the code on paper as well (both html and css on the part of .notice and .content).
