@@ -94,15 +94,52 @@
 
 - Challenge: 
     * What changes that you have to do on the code that will position .notice box on the top right corner of the .content box? Please write the code on paper as well (both html and css on the part of .notice and .content).
+      - Code:
+
+      ```  {
+      
+      // for content
+      background: lightyellow;
+      width: 300px;
+      height: 200px;
+      z-index: 1;
+
+      position: absolute;
+      top: 66px;
+      left: 190px;
+    }  
+
+    .notice {
+      // for notice
+    position: absolute;
+    top: 60px;
+    left: 400px;
+    background: orange;
+    padding: 10px;
+    z-index: 2;
+
+    position: absolute;
+    right: 0px;
+    max-width: 70px;
+    }
+    ```
+
     * Try to change the position of .content to relative then to fixed. What do you observed each time?
+      - When I changed it to relative, it moved to the middle part of the page. When it was fixed, the divider didn't move, but it stayed on the page.
     * What do you observe on about the effect of z-index on .notice and .content boxes?
+      - It controls the layering of the elements. A higher z-index will appear in front.
 
 3. Please answer the following reflection questions (15 minutes)
 
     a. Could you summarize the differences between the CSS position values (static, relative, absolute, fixed)? 
+      - Static is the default position in CSS. Relative is when an element is positioned relative to its static position. Absolute is when it is positioned relative to its nearest
+      positioned ancestor. Fixed is when an element stays on the page even when scrolling.
 
     b. How does absolute positioning depend on its parent element?
+    - The reference for these coordinates (e.g., top: 20px) depends on the parent element.
 
     c. How do you differentiate sticky from fixed (you can research on sticky)?
+      - Sticky acts relative until a certain position from the viewpoint where it turns fixed. No matter the flow of other elements within the container, fixed always fixates an element to some position.
 
     d. If you were designing a webpage for a school event, how might you use positioning to highlight important information? Please give concrete examples.
+      - I would specifically use "sticky" for important pop-ups or details and "fixed" for a footer including contact information, additional details, and necessary sources.
