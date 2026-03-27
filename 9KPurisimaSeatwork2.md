@@ -109,6 +109,7 @@
       left: 190px;
     }  
 
+    ```
     .notice {
       // for notice
     position: absolute;
@@ -123,6 +124,7 @@
     max-width: 70px;
     }
     ```
+  
 
     * Try to change the position of .content to relative then to fixed. What do you observed each time?
       - When I changed it to relative, it moved to the middle part of the page. When it was fixed, the divider didn't move, but it stayed on the page.
