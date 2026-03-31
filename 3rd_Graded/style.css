@@ -22,10 +22,15 @@ Requirements for the navigation:
 - Navigation should all be on one line only and located on the first line of the browser and will not scroll with the rest of the content.  
 - There should also a hover effect on each of the links to change background and foreground color.
 */
+
+body { margin-top: 50px; }
 nav {
     width: 100%;
     background-color: #333;
     display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 nav a {
