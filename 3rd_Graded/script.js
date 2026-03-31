@@ -3,6 +3,7 @@ function plotPoint() {
     in1.innerHTML = x0 + " " + y0 + " " + x + " " + y;
     var point = document.createElement('div');  
     point.className = 'point';
+    
     /* control where to place the div on the screen using left and bottom of position:absolute */
     point.styleleft = (x - x0 + 200 - 5) + 'px'; // subtract half the width of the point to center it by changing left css property
     point.stylebottom = (y - y0 + 200 - 5) + 'px'; // subtract half the height of the point to center it by changing bottom css property

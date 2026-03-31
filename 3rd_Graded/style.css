@@ -112,11 +112,11 @@ footer a {
 }
 
 /* --- CSS for documenting process in the table in the errorlogs.html --*/
-table{
+table {
   border-collapse: collapse;
 }
 
-th, td, tr{
+th, td, tr {
   padding: 5px;
   border: 1px solid #333;  
 }
